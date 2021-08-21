@@ -5,7 +5,7 @@ Subject: [PATCH] Add cause to Weather/ThunderChangeEvents
 
 
 diff --git a/src/main/java/net/minecraft/server/level/ServerLevel.java b/src/main/java/net/minecraft/server/level/ServerLevel.java
-index 192b9483a0b6d9129afc3a28fe69eb254a0fdf4c..9da2c0e52618afbfcaf5f7851fa0a5f85f0a12f3 100644
+index bec580b4523bdd1982e6668481e6cb9d2beb7137..7321e33cbc7d8e92ce4954eb1db8e7d5646d559b 100644
 --- a/src/main/java/net/minecraft/server/level/ServerLevel.java
 +++ b/src/main/java/net/minecraft/server/level/ServerLevel.java
 @@ -386,8 +386,8 @@ public class ServerLevel extends Level implements WorldGenLevel {
@@ -104,10 +104,10 @@ index cd840dc4a8ca432868fb3e9c912ea928e5303e0d..4d0af984490b556a9911c3b8fdca1e16
              if (weather.isCancelled()) {
                  return;
 diff --git a/src/main/java/org/bukkit/craftbukkit/CraftWorld.java b/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
-index b825673fdd7c8c8dd9e05fe6b317006a64ba913e..43f8dda87654387e95c18e93c0dd8126002b1fe0 100644
+index 5cc17afd363488f3722f3976d67f43e02fe4fc25..7ac1d5c54e13c0e9adb0559c4e2866085b033301 100644
 --- a/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
 +++ b/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
-@@ -1457,7 +1457,7 @@ public class CraftWorld implements World {
+@@ -1171,7 +1171,7 @@ public class CraftWorld extends CraftRegionAccessor implements World {
  
      @Override
      public void setStorm(boolean hasStorm) {
@@ -116,7 +116,7 @@ index b825673fdd7c8c8dd9e05fe6b317006a64ba913e..43f8dda87654387e95c18e93c0dd8126
          this.setWeatherDuration(0); // Reset weather duration (legacy behaviour)
          this.setClearWeatherDuration(0); // Reset clear weather duration (reset "/weather clear" commands)
      }
-@@ -1479,7 +1479,7 @@ public class CraftWorld implements World {
+@@ -1193,7 +1193,7 @@ public class CraftWorld extends CraftRegionAccessor implements World {
  
      @Override
      public void setThundering(boolean thundering) {
