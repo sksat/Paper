@@ -104,10 +104,10 @@ index cd840dc4a8ca432868fb3e9c912ea928e5303e0d..4d0af984490b556a9911c3b8fdca1e16
              if (weather.isCancelled()) {
                  return;
 diff --git a/src/main/java/org/bukkit/craftbukkit/CraftWorld.java b/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
-index 5cc17afd363488f3722f3976d67f43e02fe4fc25..7ac1d5c54e13c0e9adb0559c4e2866085b033301 100644
+index 42da5247ccda7c87cb1a29d19a26b1195a903a02..7efb40fd2f0cfc3cb52af9d8287ccaa42f5846cb 100644
 --- a/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
 +++ b/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
-@@ -1171,7 +1171,7 @@ public class CraftWorld extends CraftRegionAccessor implements World {
+@@ -1179,7 +1179,7 @@ public class CraftWorld extends CraftRegionAccessor implements World {
  
      @Override
      public void setStorm(boolean hasStorm) {
@@ -116,7 +116,7 @@ index 5cc17afd363488f3722f3976d67f43e02fe4fc25..7ac1d5c54e13c0e9adb0559c4e286608
          this.setWeatherDuration(0); // Reset weather duration (legacy behaviour)
          this.setClearWeatherDuration(0); // Reset clear weather duration (reset "/weather clear" commands)
      }
-@@ -1193,7 +1193,7 @@ public class CraftWorld extends CraftRegionAccessor implements World {
+@@ -1201,7 +1201,7 @@ public class CraftWorld extends CraftRegionAccessor implements World {
  
      @Override
      public void setThundering(boolean thundering) {

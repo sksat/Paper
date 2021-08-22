@@ -19,10 +19,10 @@ index 6539cd1a63f2d987bda2b91555b94df896089d1f..429c229d7c88060c76b143ff4aa1bea8
      }
  
 diff --git a/src/main/java/org/bukkit/craftbukkit/CraftWorld.java b/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
-index 7ac1d5c54e13c0e9adb0559c4e2866085b033301..4cd19170bd3843417c08ac9d5b4fe19afb170167 100644
+index 7efb40fd2f0cfc3cb52af9d8287ccaa42f5846cb..2f94c9a30df34dae4399ef4d8a5227833851cb0a 100644
 --- a/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
 +++ b/src/main/java/org/bukkit/craftbukkit/CraftWorld.java
-@@ -188,6 +188,18 @@ public class CraftWorld extends CraftRegionAccessor implements World {
+@@ -189,6 +189,18 @@ public class CraftWorld extends CraftRegionAccessor implements World {
      public io.papermc.paper.world.MoonPhase getMoonPhase() {
          return io.papermc.paper.world.MoonPhase.getPhase(getFullTime() / 24000L);
      }
